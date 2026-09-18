@@ -8,22 +8,16 @@ export default function VisitorCounter() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Get visitor count from localStorage
+    // Get visitor count from localStorage and increment on every visit
     const getVisitorCount = () => {
       try {
         // Get current count from localStorage
         const currentCount = localStorage.getItem('fct-visitor-count');
-        const lastVisit = localStorage.getItem('fct-last-visit');
-        const today = new Date().toDateString();
-        
         let count = currentCount ? parseInt(currentCount) : 1000; // Start from 1000
         
-        // Only increment if it's a new day or first visit
-        if (!lastVisit || lastVisit !== today) {
-          count += 1;
-          localStorage.setItem('fct-visitor-count', count.toString());
-          localStorage.setItem('fct-last-visit', today);
-        }
+        // Increment on every page load/refresh
+        count += 1;
+        localStorage.setItem('fct-visitor-count', count.toString());
         
         setVisitors(count);
       } catch (error) {
