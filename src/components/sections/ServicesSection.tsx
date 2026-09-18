@@ -8,12 +8,11 @@ import {
   BookOpen,
   Plane,
   Briefcase,
-  type LucideIcon,
 } from "lucide-react";
 import { services } from "@/data/services";
 import SectionHeader from "@/components/ui/SectionHeader";
 
-const icons: Record<string, LucideIcon> = {
+const icons: Record<string, any> = {
   GraduationCap,
   FileText,
   DollarSign,

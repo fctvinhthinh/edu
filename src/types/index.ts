@@ -35,6 +35,24 @@ export interface Service {
   features: string[];
 }
 
+export interface Country {
+  id: string;
+  slug: string;
+  name: string;
+  flag: string;
+  image: string;
+  cost: string;
+  duration: string;
+  description: string;
+  partTimeWage: string;
+  topCities: string[];
+  topUniversities: University[];
+  conditions: string[];
+  scholarships: string[];
+  faqs: FAQ[];
+  pros: string[];
+}
+
 export interface Testimonial {
   id: string;
   name: string;
