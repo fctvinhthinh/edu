@@ -7,7 +7,6 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import BackToTop from "@/components/ui/BackToTop";
 import ChatWidget from "@/components/ui/ChatWidget";
-import LoadingScreen from "@/components/ui/LoadingScreen";
 import LenisProvider from "@/components/providers/LenisProvider";
 import { SITE_CONFIG } from "@/constants";
 
@@ -124,7 +123,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="font-body antialiased bg-background text-foreground">
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           <LenisProvider>
-            <LoadingScreen />
             <Navbar />
             <main>{children}</main>
             <Footer />
