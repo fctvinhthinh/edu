@@ -93,7 +93,7 @@ const schemaOrg = {
   "@type": "EducationalOrganization",
   name: "FCT Education",
   url: SITE_CONFIG.url,
-  logo: `${SITE_CONFIG.url}/images/logo.png`,
+  logo: `${SITE_CONFIG.url}/images/Logo.jpg`,
   description: SITE_CONFIG.description,
   address: {
     "@type": "PostalAddress",
